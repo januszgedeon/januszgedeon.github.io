@@ -2,101 +2,159 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-	<link rel="stylesheet" type="text/css" href="">
-	<title>Gra</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Janusz Gedeon</title>
+	<link rel="stylesheet" href="1.css">
 </head>
 <body>
-	<div class="container">
-		<h3 class="text-center">
-			Witaj w grze
-			<span class="label label-default">Kamień</span>
-			<span class="label label-info">Papier</span>
-			<span class="label label-danger">Nożyce</span>
-		</h3>
-		<p>&nbsp;</p>
-	</div>
-	<div id="js-newGameElement" class="container">
-		<div class="row text-center">
-			<button  id="js-newGameButton" class="btn btn-default">
-				Nowa Gra
-			</button>
-		</div>
-		<p>&nbsp;</p>
-	</div>
-	<div id="js-playerPickElement" class="container">
-		<div class="row text-center">
-			<button id="js-playerPick_rock" class="btn">
-				<span class="badge">
-					<i class="fa fa-hand-rock-o" aria-hidden="true"></i>
-				</span>
-				Kamień
-			</button>
-			<button id="js-playerPick_paper"  class="btn">
-				<span class="badge">
-					<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
-				</span>
-				Papier
-			</button>
-			<button id="js-playerPick_scissors"  class="btn">
-				<span class="badge">
-					<i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
-				</span>
-				Nożyce
-			</button>
-		</div>
-	</div>
-	<p>&nbsp;</p>
-	<div id="js-resultsTableElement" class="container">
-		<div class="row">
-			<div class="col-xs-5 text-center">
-				<span id="js-playerPoints" class="badge">
-					0
-				</span>
-				<span id="js-playerName">
-					Imię gracza
-				</span>
-			</div>
-			<div class="col-xs-2 text-center">
-				VS.
-			</div>
-			<div class="col-xs-5 text-center">
-				<span id="js-computerPoints" class="badge">
-					0
-				</span>
-				Komputer
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-5 text-center">
-				<span id="js-playerPick">
-					Wybór gracza
-				</span>
-			</div>
-			<div class="col-xs-2"></div>
-			<div class="col-xs-5 text-center">
-				<span id="js-computerPick">
-					Wybór komputera
-				</span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-5 text-center">
-				<span id="js-playerResult">
-					Wynik gracza
-				</span>
-			</div>
-			<div class="col-xs-2"></div>
-			<div class="col-xs-5 text-center">
-				<span id="js-computerResult">
-					Wynik komputera
-				</span>
-			</div>
-		</div>
-	</div>
+	<header>
+		<div class="logo"><img src="6.svg"></div>
+		<nav>
+			<a href="#Omnie">O mnie</a>
+			<a href="#Projekty">Projekty</a>
+			<a href="#Kontakt">Kontakt</a>
+		</nav>
 
+		<h1><span>Janusz Gedeon</span></h1>
+		<p class="kicker">Junior Front-end Developer</p>
+	</header>
 
-	<script src="script.js"></script>
+	<section>
+		<h3 id="Omnie">O mnie</h3>
+		<div class="face-lockup">
+			<div class="face-img"></div>
+			<div class="icon-pencil"><img class="svg" src="1.svg"></div>
+			<div class="icon-mouse"><img class="svg" src="3.svg"></div>
+			<div class="icon-browser"><img class="svg" src="5.svg"></div>
+			<div class="icon-video"><img class="svg" src="4.svg"></div>
+		</div>
+		<div class="blurb">
+			<p><strong>Tworzę rzeczy ładne i bardzo ładne. </strong><br> Lubię przekładać wizję twórcy na język kodu w dobrym stylu.</p>
+		</div>
+		<div class="skill-lockup">
+			<div class="skill-unit">
+				<div class="skill-label">Komunikacja</div>
+				<div class="skill-icons skill-7">
+					<span></span><span></span><span></span><span></span><span></span>
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
+			</div>
+			<div class="skill-unit">
+				<div class="skill-label">Zdolność uczenia się</div>
+				<div class="skill-icons skill-7">
+					<span></span><span></span><span></span><span></span><span></span>
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
+			</div>
+			<div class="skill-unit">
+				<div class="skill-label">Organizacja</div>
+				<div class="skill-icons skill-7">
+					<span></span><span></span><span></span><span></span><span></span>
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
+			</div>
+			<div class="skill-unit">
+				<div class="skill-label">HTML5 CSS3 Twitter Bootstrap RWD</div>
+				<div class="skill-icons skill-6">
+					<span></span><span></span><span></span><span></span><span></span>
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
+			</div>
+			<div class="skill-unit">
+				<div class="skill-label">Sass Grunt</div>
+				<div class="skill-icons skill-3">
+					<span></span><span></span><span></span><span></span><span></span>
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
+			</div>
+			<div class="skill-unit">
+				<div class="skill-label">JavaScript jQuery AJAX</div>
+				<div class="skill-icons skill-3">
+					<span></span><span></span><span></span><span></span><span></span>
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+	<section class="alt-section">
+		<h3 id="Projekty">Projekty</h3>
+		<div class="thumb-container">
+			<a href="https://januszgedeon.github.io/01koty/" class="thumb-unit background-unit1">
+				<div class="thumb-overlay">
+					<strong>Blog o kotach</strong>
+				</div>
+			</a>
+			<a href="https://januszgedeon.github.io/02polarny/" class="thumb-unit background-unit2">
+				<div class="thumb-overlay">
+					<strong>Niedźwiedź polarny</strong>
+				</div>
+			</a>
+			<a href="https://januszgedeon.github.io/05kamien/" class="thumb-unit background-unit3">
+				<div class="thumb-overlay">
+					<strong>Gra - Kamień papier nożyce</strong>
+				</div>
+			</a>
+			<a href="https://januszgedeon.github.io/14treloAjax/" class="thumb-unit background-unit4">
+				<div class="thumb-overlay">
+					<strong>Organizer "To do"-trello</strong>
+				</div>
+			</a>
+			<a href="https://januszgedeon.github.io/03wisielec/" class="thumb-unit background-unit5">
+				<div class="thumb-overlay">
+					<strong>Gra Wisielec</strong>
+				</div>
+			</a>
+			<a href="https://januszgedeon.github.io/03quiz/" class="thumb-unit background-unit6">
+				<div class="thumb-overlay">
+					<strong>Test/Quiz dowolny</strong>
+				</div>
+			</a>
+			<a href="https://januszgedeon.github.io/04cytaty/" class="thumb-unit background-unit7">
+				<div class="thumb-overlay">
+					<strong>AJAX cytaty Twitter</strong>
+				</div>
+			</a>
+			<a href="https://januszgedeon.github.io/07memory/" class="thumb-unit background-unit8">
+				<div class="thumb-overlay">
+					<strong>Gra Memory</strong>
+				</div>
+			</a>
+
+		</div>
+		<div class="clearfix"></div>		
+	</section>
+	<footer id="Kontakt">
+		<div class="lockup">
+			<div class="logo"><img src="2.svg">
+			</div>
+			<div class="content-wrap">
+				<nav><a href="mailto:janusz.gedeon@gmail.com">janusz.gedeon@gmail.com</a></nav>
+				
+			</div>
+			<div class="clearfix"></div>
+		</div>	
+
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(function() {
+			smoothScroll(1000);
+
+		});
+		function smoothScroll (duration) {
+			$('a[href^="#"]').on('click', function(event) {
+
+				var target = $( $(this).attr('href') );
+
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, duration);
+				}
+			});
+		}
+	</script>
 </body>
 </html>
