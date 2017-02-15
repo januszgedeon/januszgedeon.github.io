@@ -23,8 +23,9 @@ header {
 }
 
 .svg {
-	height: 80px;
-	width: 80px;
+	padding-top: 10px;
+	height: 70px;
+	width: 70px;
 }
 
 nav {
@@ -76,25 +77,28 @@ footer {
 	background: url("header2.jpg") center center;
 	background-size: cover;
 }
-
+#kontakt {
+	}
 .lockup {
 	padding: 10px 30px 10px 0px;
 }
 
 .content-wrap {
 	float: left;
+	margin-left: 10px;
+	padding-top: 30px;
 }
 
 .content-wrap a {
-	padding-top: 30px;
-	font-size: 14px;
+	
+	font-size: px;
 	font-weight: 700;
 	text-transform: uppercase;
-	color: #4c3726;
+	color: #241A12;
 }
 
-.content-wrap nav a:hover {
-	color: #7a583e;
+.content-wrap a:hover {
+	color: #b2805a;
 }
 
 .logoFooter {
@@ -176,7 +180,8 @@ h3 {
 
 	[class*="icon-"] {
 		margin: 10px 9%;
-	}
+		
+			}
 }
 
 
@@ -254,14 +259,14 @@ h3 {
 	display: block;
 	width: 25%;
 	position: relative;
-	padding-top: 16%;
+	padding-top: 20%;
 	overflow: hidden;
-	background: pink;
 	float: left;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	perspective: 300px;
+	
 }
 
 .background-unit1 {
@@ -269,7 +274,7 @@ background-image: url(koty.png);
 }
 
 .background-unit2 {
-background-image: url(polarny.png);
+background-image: url(02polarny2.png);
 }
 
 .background-unit3 {
@@ -334,7 +339,7 @@ background-image: url(07memory.png);
 	text-transform: uppercase;
 	font-size: 20px;
 	line-height: 1.2;
-	color: #4c3726;
+	color: #241A12;
 }
 
 
