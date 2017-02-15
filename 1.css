@@ -91,7 +91,6 @@ footer {
 
 .content-wrap a {
 	
-	font-size: px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #241A12;
@@ -107,8 +106,8 @@ footer {
 }
 
 h3 {
-	font-size: 16px;
-	font-weight: 700;
+	font-size: 30px;
+	font-weight: 300;
 	text-transform: uppercase;
 	color: #b2805a;
 	text-align: center;
@@ -257,9 +256,9 @@ h3 {
 
 .thumb-unit {
 	display: block;
-	width: 25%;
+	width: 50%;
 	position: relative;
-	padding-top: 20%;
+	padding-top: 30%;
 	overflow: hidden;
 	float: left;
 	background-position: center center;
@@ -301,12 +300,17 @@ background-image: url(04cytaty.png);
 background-image: url(07memory.png);
 }
 
+
 @media screen and (max-width: 760px) {
 	.thumb-unit {
-		width: 50%;
-		padding-top: 30%;
+		width: 100%;
+		padding-top: 40%;
+	}
+	.thumb-overlay strong {
+	font-size: 16px;
 	}
 }
+
 .thumb-overlay {
 	position: absolute;
 	top: -50%;
@@ -337,7 +341,7 @@ background-image: url(07memory.png);
 	color: black;
 	font-weight: 300;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 30px;
 	line-height: 1.2;
 	color: #241A12;
 }
