@@ -276,16 +276,105 @@ h3 {
   line-height: 1.2;
   color: #241A12; }
 
+#Klienci {
+  background: #e5eaee;
+  padding-bottom: 50px; }
+  #Klienci h3 {
+    margin-top: 0; }
+
+#container {
+  overflow: hidden;
+  width: 700px; }
+
+#slider {
+  width: 700px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin: 0 auto; }
+
+.slide {
+  width: 700px;
+  position: absolute;
+  background-repeat: no-repeat; }
+
+.slide-copy {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.slide-copy-inner1 {
+  text-align: center;
+  padding: 10px 30px 10px 20px;
+  margin: 0 50px 0 50px;
+  display: flex; }
+
+#prev, #next {
+  float: left;
+  margin-top: 130px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  height: 40px;
+  width: 40px; }
+
+#prev {
+  margin-right: -40px; }
+
+#next {
+  margin-left: -40px; }
+
+.client-logo {
+  width: 70px;
+  height: 70px; }
+
+.client-name {
+  text-align: center;
+  display: block;
+  padding-top: 10px; }
+
+.client-face {
+  border-radius: 50%; }
+
+.client-title {
+  padding-bottom: 10px;
+  display: block; }
+
+.client-opis {
+  padding: 30px 0 0 40px;
+  text-align: left; }
+  .client-opis p {
+    line-height: 1.6em; }
+
+@media (max-width: 700px) {
+  .slide-copy-inner1 {
+    flex-direction: column;
+    margin: 0;
+    padding: 0; }
+
+  .slide {
+    width: 320px; }
+
+  #slider {
+    width: 320px;
+    height: 550px; }
+
+  .client-opis {
+    padding: 0;
+    text-align: center; }
+    .client-opis p {
+      line-height: 1.3em; } }
 .contact-mail {
   text-align: center;
   padding-bottom: 20px; }
   .contact-mail img, .contact-mail p {
     display: inline-block; }
-  .contact-mail p {
-    color: #7a583e;
-    margin-left: 15px;
-    margin-top: -30px;
-    font-size: 23px; }
+    .contact-mail img p, .contact-mail p p {
+      color: #7a583e;
+      margin-left: 15px;
+      padding-top: -30px;
+      font-size: 23px; }
 
 form {
   max-width: 450px;
