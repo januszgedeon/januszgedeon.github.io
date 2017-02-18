@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Janusz Gedeon</title>
 	<link rel="stylesheet" href="1.css">
 </head>
@@ -31,7 +32,7 @@
 		<div class="blurb">
 			<p><strong>Tworzę rzeczy ładne i bardzo ładne. </strong><br> Lubię przekładać wizję twórcy na język kodu <br>... z dbałością o detale.</p>
 		</div>
-		<div class="skill-lockup">
+		<div class="skill-lockup hidden">
 			<div class="skill-unit">
 				<div class="skill-label">Komunikacja</div>
 				<div class="skill-icons skill-8">
@@ -132,7 +133,7 @@
 			<div class="slide">
 				<div class="slide-copy">
 					<div class="slide-copy-inner1">
-					<div>
+					<div class="client-firma">
 						<img class="client-face" src="client-face1.jpg" alt="">
 						<strong class="client-name">Bonifacy I</strong>
 						<em class="client-title">Wygrał 13 edycję "Tańca z gwiazdami"</em>
@@ -300,6 +301,22 @@
 		});
 
 	</script>
+	<script>
+	(function(){
+		var aboutEl = $('div.skill-lockup'),
+			aboutElOffset = aboutEl.offset().top/2,
+			documentEl = $(document);
+		documentEl.on('scroll', function(){
+			if (documentEl.scrollTop() > aboutElOffset && aboutEl.hasClass('hidden')) aboutEl.removeClass('hidden');
+		});
+
+	})();
+
+
+
+</script>
+
+
 
 </body>
 </html>

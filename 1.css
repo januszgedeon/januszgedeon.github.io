@@ -145,14 +145,27 @@ h3 {
 .skill-lockup {
   max-width: 540px;
   margin: 100px auto;
-  color: #241A12; }
-  .skill-lockup .skill-unit {
+  color: #241A12;
+  transform-style: preserve-3d;
+  transform: perspective(800px); }
+
+.skill-lockup.hidden .skill-unit {
+  opacity: 0;
+  transform: translate3d(0, 0, 400px) rotateY(-40deg); }
+
+.skill-lockup.hidden .skill-label {
+  opacity: 0;
+  transform: translate3d(0, 0, 400px) rotateY(40deg); }
+
+.skill-lockup .skill-unit, .skill-lockup {
+  transition: all 0.6s ease; }
+  .skill-lockup .skill-unit .skill-unit, .skill-lockup .skill-unit {
     width: 270px;
     float: left; }
-  .skill-lockup .skill-icons {
+  .skill-lockup .skill-unit .skill-icons, .skill-lockup .skill-icons {
     font-size: 0;
     margin: 5px 0 30px; }
-    .skill-lockup .skill-icons span {
+    .skill-lockup .skill-unit .skill-icons span, .skill-lockup .skill-icons span {
       display: inline-block;
       height: 14px;
       width: 14px;
@@ -160,7 +173,7 @@ h3 {
       margin-right: 5px;
       border-radius: 50%;
       border: 0; }
-      .skill-lockup .skill-icons span:after {
+      .skill-lockup .skill-unit .skill-icons span:after, .skill-lockup .skill-icons span:after {
         content: "";
         display: block;
         height: 10px;
@@ -168,25 +181,25 @@ h3 {
         background: #ffffff;
         border-radius: 50%;
         margin: 2px; }
-    .skill-lockup .skill-icons.skill-1 span:nth-child(n+1) {
+    .skill-lockup .skill-unit .skill-icons.skill-1 span:nth-child(n+1), .skill-lockup .skill-icons.skill-1 span:nth-child(n+1) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-2 span:nth-child(n+2) {
+    .skill-lockup .skill-unit .skill-icons.skill-2 span:nth-child(n+2), .skill-lockup .skill-icons.skill-2 span:nth-child(n+2) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-3 span:nth-child(n+3) {
+    .skill-lockup .skill-unit .skill-icons.skill-3 span:nth-child(n+3), .skill-lockup .skill-icons.skill-3 span:nth-child(n+3) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-4 span:nth-child(n+4) {
+    .skill-lockup .skill-unit .skill-icons.skill-4 span:nth-child(n+4), .skill-lockup .skill-icons.skill-4 span:nth-child(n+4) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-5 span:nth-child(n+5) {
+    .skill-lockup .skill-unit .skill-icons.skill-5 span:nth-child(n+5), .skill-lockup .skill-icons.skill-5 span:nth-child(n+5) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-6 span:nth-child(n+6) {
+    .skill-lockup .skill-unit .skill-icons.skill-6 span:nth-child(n+6), .skill-lockup .skill-icons.skill-6 span:nth-child(n+6) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-7 span:nth-child(n+7) {
+    .skill-lockup .skill-unit .skill-icons.skill-7 span:nth-child(n+7), .skill-lockup .skill-icons.skill-7 span:nth-child(n+7) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-8 span:nth-child(n+8) {
+    .skill-lockup .skill-unit .skill-icons.skill-8 span:nth-child(n+8), .skill-lockup .skill-icons.skill-8 span:nth-child(n+8) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-9 span:nth-child(n+9) {
+    .skill-lockup .skill-unit .skill-icons.skill-9 span:nth-child(n+9), .skill-lockup .skill-icons.skill-9 span:nth-child(n+9) {
       background: #e5eaee; }
-    .skill-lockup .skill-icons.skill-10 span:nth-child(n+10) {
+    .skill-lockup .skill-unit .skill-icons.skill-10 span:nth-child(n+10), .skill-lockup .skill-icons.skill-10 span:nth-child(n+10) {
       background: #e5eaee; }
 
 @media screen and (max-width: 541px) {
@@ -284,7 +297,8 @@ h3 {
 
 #container {
   overflow: hidden;
-  width: 700px; }
+  width: 700px;
+  margin: 0 auto; }
 
 #slider {
   width: 700px;
@@ -297,7 +311,8 @@ h3 {
 .slide {
   width: 700px;
   position: absolute;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: flex; }
 
 .slide-copy {
   position: absolute;
@@ -347,7 +362,30 @@ h3 {
   .client-opis p {
     line-height: 1.6em; }
 
-@media (max-width: 700px) {
+@media screen and (min-width: 321px) and (max-width: 699px) {
+  .slide-copy-inner1 {
+    flex-direction: column;
+    margin: 0;
+    padding: 0; }
+
+  .slide {
+    width: 320px;
+    margin: 0 auto; }
+
+  #slider {
+    width: 320px;
+    height: 550px; }
+
+  .client-opis {
+    padding: 0;
+    text-align: center; }
+    .client-opis p {
+      line-height: 1.3em; }
+
+  #container {
+    margin: 0;
+    width: 100%; } }
+@media (max-width: 320px) {
   .slide-copy-inner1 {
     flex-direction: column;
     margin: 0;
@@ -364,7 +402,10 @@ h3 {
     padding: 0;
     text-align: center; }
     .client-opis p {
-      line-height: 1.3em; } }
+      line-height: 1.3em; }
+
+  #container {
+    margin: 0; } }
 .contact-mail {
   text-align: center;
   padding-bottom: 20px; }
