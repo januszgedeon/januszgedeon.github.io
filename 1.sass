@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext')
+@import small
+$jasny: #b2805a
+$ciemny: #4c3726
+$najciemniejszy: #241A12
+$sredni: #7a583e
+$tlo: #e5eaee
+
+* 
+	font-family: 'Lato', sans-serif
+	text-decoration: none
+	
+
+body 
+	margin: 0
+	padding: 0
+
+.clearfix 
+	clear: both
+
+header 
+	height: 450px
+	background: url("header.jpg") center center
+	background-size: cover
+	
+	.logo 
+		height: 80px
+		width: 80px
+		float: left
+		margin: 10px 0 0 30px
+
+	nav 
+		float: right
+		margin: 30px 30px 0 0
+
+		a 
+			display: inline-block
+			margin-left: 20px
+			color: $ciemny
+			@extend %small
+
+			&:hover 
+				color: $sredni
+	h1 
+		font:
+			size: 50px
+			weight: 700
+		text-align: center
+		color: white
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		margin-bottom: 20px
+		clear: both
+		padding-top: 50px
+
+		span 
+			display: inline-block
+			padding: 0.2em 0.5em
+			border: white solid 10px
+
+	.kicker 
+		text-align: center
+		letter-spacing: 0.05em
+		color: white
+		line-height: 1
+		@extend %small
+
+
+footer 
+	background: url("header.jpg") center center
+	background-size: cover
+
+	.lockup 
+		padding: 50px 30px
+
+		.logo
+			height: 50px
+			width: 50px
+			float: left
+			margin-right: 30px
+
+		.content-wrap 
+			float: left
+			
+			a
+				@extend %small
+				color: $najciemniejszy
+				display: inline-block
+				margin-right: 30px
+
+
+				&:hover
+					color: $jasny
+
+			
+			.copyright
+				margin: 0
+				text-transform: uppercase
+				font-size: 12px
+				color: $najciemniejszy
+
+h3 
+	@extend %small
+	color: $jasny
+	text-align: center
+	padding: 100px 0 30px
+
+.face-lockup 
+	max-width: 780px
+	display: flex
+	margin: 0 auto
+	align-items: center
+	justify-content: space-between
+
+	.face-img 
+		width: 200px
+		height: 200px
+		border-radius: 50%
+		background: url("face.png")
+		order: 3
+
+.svg 
+	padding-top: 10px
+	height: 70px
+	width: 70px
+		
+
+[class*="icon-"]
+	height: 110px
+	width: 110px
+	background: $tlo
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&.icon-talk
+		order: 1
+	&.icon-type
+		order: 2
+	&.icon-write
+		order: 4
+	&.icon-rwd
+		order: 5
+
+@media screen and (max-width: 650px) 
+	.face-lockup 
+		display: block
+		text-align: center
+	
+		div 
+			display: inline-block
+	
+		.face-img 
+			display: block
+			background:
+				position: center center
+				repeat: no-repeat
+			margin: 0 auto 30px
+	
+
+	[class*="icon-"] 
+		margin: 10px 9%
+
+@media screen and (max-width: 480px) 
+	h3 
+		padding: 50px 0 50px
+
+.blurb 
+	max-width: 620px
+	padding: 0 15px
+	margin: 50px auto
+	font-size: 24px
+	text-align: center
+	font-weight: 300
+
+
+.skill-lockup 
+	max-width: 540px
+	margin: 100px auto
+	color: $najciemniejszy
+
+	transform-style: preserve-3d /*dopisane*/
+	transform: perspective(800px)
+
+.skill-lockup.hidden .skill-unit 
+	opacity: 0
+	transform: translate3d(0, 0, 400px) rotateY(-40deg)
+
+
+.skill-lockup.hidden .skill-label
+	opacity: 0
+	transform: translate3d(0, 0, 400px) rotateY(40deg)
+
+.skill-lockup .skill-unit, .skill-lockup
+	transition: all 0.6s ease
+
+
+
+
+
+
+	.skill-unit 
+		width: 270px
+		float: left
+
+	.skill-icons 
+		font-size: 0
+		margin: 5px 0 30px
+		
+		span 
+			display: inline-block
+			height: 14px
+			width: 14px
+			background-color: $jasny
+			margin-right: 5px
+			border-radius: 50%
+			border: 0
+			
+			&:after 
+				content: ""
+				display: block
+				height: 10px
+				width: 10px
+				background: #ffffff
+				border-radius: 50%
+				margin: 2px
+
+		@for $i from 1 through 10
+			&.skill-#{$i} span:nth-child(n+#{$i})
+				background: $tlo
+	
+@media screen and (max-width: 541px) 
+	.skill-lockup 
+		width: 270px
+
+.alt-section 
+	background: $tlo
+	padding-bottom: 100px
+
+.thumb-container 
+	max-width: 960px
+	margin: 0px auto
+	text-align: center
+
+
+.thumb-unit 
+	display: block
+	width: 50%
+	position: relative
+	padding-top: 30%
+	overflow: hidden
+	float: left
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	perspective: 300px
+	
+
+
+.background-unit1
+	background-image: url(koty.png)
+
+
+.background-unit2 
+	background-image: url(02polarny2.png)
+
+
+.background-unit3 
+	background-image: url(05kamien.png)
+
+
+.background-unit4 
+	background-image: url(14trelo.png)
+
+
+.background-unit5 
+	background-image: url(03wisielec.png)
+
+
+.background-unit6 
+	background-image: url(03quiz.png)
+
+
+.background-unit7 
+	background-image: url(04cytaty.png)
+
+
+.background-unit8 
+	background-image: url(07memory.png)
+
+
+
+@media screen and (max-width: 760px) 
+	.thumb-unit 
+		width: 100%
+		padding-top: 40%
+	
+	.thumb-overlay strong 
+		font-size: 16px
+	
+
+
+.thumb-overlay 
+	position: absolute
+	top: -50%
+	right: 0
+	left: 0
+	height: 100%
+	text-align: center
+	display: flex
+	align-items: center
+	justify-content: center
+	background: rgba(178, 128, 90, .8)
+	transition: 0.4s
+	transform: rotateX(90deg)
+	transform-origin: center bottom
+	opacity: 0
+
+
+.thumb-unit:hover .thumb-overlay 
+	position: absolute
+	top: 0%
+	transform: rotateX(0deg)
+	opacity: 1
+
+
+.thumb-overlay strong 
+	display: block
+	padding: 0 18px
+	color: black
+	font-weight: 300
+	text-transform: uppercase
+	font-size: 30px
+	line-height: 1.2
+	color: $najciemniejszy
+
+#Klienci
+	background: $tlo
+	padding-bottom: 50px
+	h3
+		margin-top: 0
+
+
+
+#container	
+	overflow: hidden
+	max-width: 700px
+	margin: 0 auto
+
+
+#slider
+	width: 700px
+	height: 350px
+	position: relative
+	overflow: hidden
+	float: left
+	margin: 0 auto
+	
+
+.slide 
+	width: 700px
+	position: absolute
+	background-repeat: no-repeat
+	display: flex
+	
+.slide-copy 
+	position: absolute
+	top: 0
+	left: 0
+	
+
+
+
+.slide-copy-inner1 
+	text-align: center
+	padding: 10px 30px 10px 20px
+	margin: 0 50px 0 50px
+	display: flex
+
+
+#prev, #next 
+	float: left
+	margin-top: 130px
+	cursor: pointer
+	position: relative
+	z-index: 100
+	height: 40px
+	width: 40px
+
+#prev 
+	margin-right: -40px
+
+#next
+	margin-left: -40px
+
+.client-logo
+	width: 70px
+	height: 70px
+
+.client-name
+	text-align: center
+	display: block
+	padding-top: 10px
+
+.client-face
+	border-radius: 50%
+
+.client-title
+	padding-bottom: 10px
+	display: block
+
+
+.client-opis
+	padding: 30px 0 0 40px
+	text-align: left
+	p 
+		line-height: 1.6em
+
+@media screen and (min-width: 321px) and (max-width: 699px) 
+	.slide-copy-inner1
+		flex-direction: row
+		margin: 0
+		padding: 0
+		margin: 0 auto
+		min-width: 320px
+
+	
+	.slide 
+		width: 320px
+		margin: 0 auto
+
+	.slide-copy
+		min-width: 320px
+		margin: 0 auto
+
+			
+	#slider 
+		min-width: 320px
+		height: 550px
+		margin: 0 auto
+
+
+		
+	.client-opis
+		padding: 0
+		text-align: center
+		p 
+			line-height: 1.3em
+
+	#container
+		margin: 0 auto
+		width: auto
+
+@media (max-width: 320px)
+	.slide-copy-inner1
+		flex-direction: column
+		margin: 0
+		padding: 0
+
+	
+	.slide 
+		width: 320px
+			
+	#slider 
+		width: 320px
+		height: 750px
+		
+	.client-opis
+		padding: 0
+		text-align: center
+		p 
+			line-height: 1.3em
+
+	#container
+		margin: 0
+		
+
+
+
+
+
+.contact-mail
+	text-align: center
+	padding-bottom: 20px
+	
+	img, p
+		display: inline-block
+	
+		p
+			color: $sredni
+			margin-left: 15px
+			padding-top: -30px
+			font-size: 23px
+		
+
+
+
+form
+	max-width: 450px
+	margin: 0 auto 50px
+
+	input, textarea
+		border: 2px solid $jasny
+		width: 100%
+		box-sizing: border-box
+		padding: 10px
+
+		&:focus
+			outline: none
+			border-color: $ciemny
+	
+	textarea
+		height: 10em
+
+	.submit-wrap
+		text-align: right
+
+	[type="submit"]
+		background: $jasny
+		color: white
+		font-size: 18px
+		text-transform: uppercase
+		width: 33%
+
+		&:hover
+			background: $ciemny
+
+
+	.contact-info-group
+
+		label
+			width: 50%
+			float: left
+			box-sizing: border-box
+
+			&:nth-child(1)
+				padding-right: 10px
+
+			&:nth-child(2)
+				padding-left: 10px
+	
+	label 
+		display: block
+		margin-bottom: 20px
+		
+	span 
+		display: block
+		
+
+
+
+
+
+
