@@ -13,6 +13,7 @@
 		<nav>
 			<a href="#Omnie">O mnie</a>
 			<a href="#Projekty">Projekty</a>
+			<a href="#Klienci">Klienci</a>
 			<a href="#Kontakt">Kontakt</a>
 		</nav>
 
@@ -133,11 +134,11 @@
 			<div class="slide">
 				<div class="slide-copy">
 					<div class="slide-copy-inner1">
-					<div class="client-firma">
-						<img class="client-face" src="client-face1.jpg" alt="">
-						<strong class="client-name">Bonifacy I</strong>
-						<em class="client-title">Wygrał 13 edycję "Tańca z gwiazdami"</em>
-						<img class="client-logo" src="client-logo1.svg" alt="">
+						<div>
+							<img class="client-face" src="client-face1.jpg" alt="">
+							<strong class="client-name">Bonifacy I</strong>
+							<em class="client-title">Wygrał 13 edycję "Tańca z gwiazdami"</em>
+							<img class="client-logo" src="client-logo1.svg" alt="">
 						</div>
 						<div class="client-opis">
 							<img src="quote.svg" alt="">
@@ -150,11 +151,11 @@
 			<div class="slide">
 				<div class="slide-copy">
 					<div class="slide-copy-inner1">
-					<div>
-						<img class="client-face" src="client-face2.jpg" alt="">
-						<strong class="client-name">Biały Miś</strong>
-						<em class="client-title">To o nim jest piosenka "Biały miś"</em>
-						<img class="client-logo" src="client-logo2.svg" alt="">
+						<div>
+							<img class="client-face" src="client-face2.jpg" alt="">
+							<strong class="client-name">Biały Miś</strong>
+							<em class="client-title">To o nim jest piosenka "Biały miś"</em>
+							<img class="client-logo" src="client-logo2.svg" alt="">
 						</div>
 						<div class="client-opis">
 							<img src="quote.svg" alt="">
@@ -192,7 +193,7 @@
 		
 	</section>
 	<section>
-		<h3>Popracujmy razem</h3>
+		<h3 id="Kontakt">Popracujmy razem</h3>
 		<div class="contact-mail">
 			<img class="svg" src="2.svg">
 			<p>janusz.gedeon@gmail.com</p>
@@ -224,6 +225,7 @@
 				<nav>
 					<a href="#Omnie">O mnie</a>
 					<a href="#Projekty">Projekty</a>
+					<a href="#Klienci">Klienci</a>
 					<a href="#Kontakt">Kontakt</a>
 				</nav>
 				<p class="copyright">Gedeon 2017</p>
@@ -256,7 +258,7 @@
 		$(document).ready(function(){
 			var speed = 500;
 			var autoswitch = true;
-			var autoswitch_speed = 2000000
+			var autoswitch_speed = 3000
 
 			$('.slide').first().addClass('active');
 			$('.slide').hide();

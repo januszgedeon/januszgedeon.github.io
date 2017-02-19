@@ -291,13 +291,14 @@ h3 {
 
 #Klienci {
   background: #e5eaee;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+   }
   #Klienci h3 {
     margin-top: 0; }
 
 #container {
   overflow: hidden;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto; }
 
 #slider {
@@ -312,18 +313,21 @@ h3 {
   width: 700px;
   position: absolute;
   background-repeat: no-repeat;
-  display: flex; }
+  display: flex;
+  margin: 0 auto; }
 
 .slide-copy {
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  }
 
 .slide-copy-inner1 {
   text-align: center;
   padding: 10px 30px 10px 20px;
   margin: 0 50px 0 50px;
-  display: flex; }
+  display: flex;
+   }
 
 #prev, #next {
   float: left;
@@ -362,19 +366,23 @@ h3 {
   .client-opis p {
     line-height: 1.6em; }
 
-@media screen and (min-width: 321px) and (max-width: 699px) {
+
+@media (max-width: 699px) {
   .slide-copy-inner1 {
     flex-direction: column;
-    margin: 0;
+    margin: 0 auto;
     padding: 0; }
 
   .slide {
     width: 320px;
-    margin: 0 auto; }
+    display: block; }
 
   #slider {
     width: 320px;
-    height: 550px; }
+    height: 750px;
+    margin: 0 auto;
+
+     }
 
   .client-opis {
     padding: 0;
@@ -383,29 +391,9 @@ h3 {
       line-height: 1.3em; }
 
   #container {
-    margin: 0;
-    width: 100%; } }
-@media (max-width: 320px) {
-  .slide-copy-inner1 {
-    flex-direction: column;
-    margin: 0;
-    padding: 0; }
+    margin: 0 auto; } }
 
-  .slide {
-    width: 320px; }
 
-  #slider {
-    width: 320px;
-    height: 550px; }
-
-  .client-opis {
-    padding: 0;
-    text-align: center; }
-    .client-opis p {
-      line-height: 1.3em; }
-
-  #container {
-    margin: 0; } }
 .contact-mail {
   text-align: center;
   padding-bottom: 20px; }
@@ -453,3 +441,5 @@ form {
     margin-bottom: 20px; }
   form span {
     display: block; }
+
+/*# sourceMappingURL=1.css.map */
