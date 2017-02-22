@@ -133,7 +133,7 @@ h3 {
     margin: 10px 9%; } }
 @media screen and (max-width: 480px) {
   h3 {
-    padding: 50px 0 50px; } }
+    padding: 40px 0; } }
 .blurb {
   max-width: 620px;
   padding: 0 15px;
@@ -221,7 +221,7 @@ h3 {
   padding-top: 30%;
   overflow: hidden;
   float: left;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   perspective: 300px; }
@@ -245,7 +245,7 @@ h3 {
   background-image: url(03quiz.png); }
 
 .background-unit7 {
-  background-image: url(04cytaty.png); }
+  background-image: url(06kraje.png); }
 
 .background-unit8 {
   background-image: url(07memory.png); }
@@ -291,8 +291,7 @@ h3 {
 
 #Klienci {
   background: #e5eaee;
-  padding-bottom: 50px;
-   }
+  padding-bottom: 50px; }
   #Klienci h3 {
     margin-top: 0; }
 
@@ -313,21 +312,18 @@ h3 {
   width: 700px;
   position: absolute;
   background-repeat: no-repeat;
-  display: flex;
-  margin: 0 auto; }
+  display: flex; }
 
 .slide-copy {
   position: absolute;
   top: 0;
-  left: 0;
-  }
+  left: 0; }
 
 .slide-copy-inner1 {
   text-align: center;
   padding: 10px 30px 10px 20px;
   margin: 0 50px 0 50px;
-  display: flex;
-   }
+  display: flex; }
 
 #prev, #next {
   float: left;
@@ -366,23 +362,26 @@ h3 {
   .client-opis p {
     line-height: 1.6em; }
 
-
-@media (max-width: 699px) {
+@media screen and (min-width: 321px) and (max-width: 699px) {
   .slide-copy-inner1 {
-    flex-direction: column;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
     margin: 0 auto;
-    padding: 0; }
+    min-width: 320px; }
 
   .slide {
     width: 320px;
-    display: block; }
+    margin: 0 auto; }
+
+  .slide-copy {
+    min-width: 320px;
+    margin: 0 auto; }
 
   #slider {
-    width: 320px;
-    height: 750px;
-    margin: 0 auto;
-
-     }
+    min-width: 320px;
+    height: 550px;
+    margin: 0 auto; }
 
   .client-opis {
     padding: 0;
@@ -391,9 +390,29 @@ h3 {
       line-height: 1.3em; }
 
   #container {
-    margin: 0 auto; } }
+    margin: 0 auto;
+    width: auto; } }
+@media (max-width: 320px) {
+  .slide-copy-inner1 {
+    flex-direction: column;
+    margin: 0;
+    padding: 0; }
 
+  .slide {
+    width: 320px; }
 
+  #slider {
+    width: 320px;
+    height: 750px; }
+
+  .client-opis {
+    padding: 0;
+    text-align: center; }
+    .client-opis p {
+      line-height: 1.3em; }
+
+  #container {
+    margin: 0; } }
 .contact-mail {
   text-align: center;
   padding-bottom: 20px; }
