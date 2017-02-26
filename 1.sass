@@ -5,6 +5,7 @@ $ciemny: #4c3726
 $najciemniejszy: #241A12
 $sredni: #7a583e
 $tlo: #e5eaee
+$ciemnetlo: #CCD0D4
 
 * 
 	font-family: 'Lato', sans-serif
@@ -104,6 +105,7 @@ h3
 	color: $jasny
 	text-align: center
 	padding: 100px 0 30px
+	margin: 0
 
 .face-lockup 
 	max-width: 780px
@@ -236,7 +238,7 @@ h3
 		width: 270px
 
 .alt-section 
-	background: $tlo
+	background: $ciemnetlo
 	padding-bottom: 100px
 
 .thumb-container 
@@ -245,18 +247,61 @@ h3
 	text-align: center
 
 
-.thumb-unit 
-	display: block
+
+.thumb-overlay
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: cover
+	position: absolute
+	top: -50%
+	right: 0
+	left: 0
+	height: 100%
+	perspective: 300px
+
+	transition: 0.5s
+	transform: rotateX(90deg)
+	transform-origin: center bottom
+	opacity: 0
+
+.thumb-unit
 	width: 50%
 	position: relative
 	padding-top: 30%
 	overflow: hidden
 	float: left
-	background-position: top center
-	background-repeat: no-repeat
-	background-size: cover
-	perspective: 300px
+	text-align: center
+	background: rgba(178, 128, 90, .6)
+
+
+@media screen and (max-width: 760px) 
+	.thumb-unit 
+		width: 100%
+		padding-top: 40%
 	
+	.thumb-unit strong 
+		font-size: 16px
+	
+
+.thumb-unit:hover .thumb-overlay 
+	position: absolute
+	top: 0%
+	transform: rotateX(0deg)
+	opacity: 1
+
+
+.thumb-unit strong
+	display: block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translateX(-50%) translateY(-50%)
+	padding: 0 18px
+	font-weight: 300
+	text-transform: uppercase
+	font-size: 30px
+	color: $najciemniejszy
+
 
 
 .background-unit1
@@ -292,49 +337,11 @@ h3
 
 
 
-@media screen and (max-width: 760px) 
-	.thumb-unit 
-		width: 100%
-		padding-top: 40%
-	
-	.thumb-overlay strong 
-		font-size: 16px
-	
 
 
-.thumb-overlay 
-	position: absolute
-	top: -50%
-	right: 0
-	left: 0
-	height: 100%
-	text-align: center
-	display: flex
-	align-items: center
-	justify-content: center
-	background: rgba(178, 128, 90, .8)
-	transition: 0.4s
-	transform: rotateX(90deg)
-	transform-origin: center bottom
-	opacity: 0
 
 
-.thumb-unit:hover .thumb-overlay 
-	position: absolute
-	top: 0%
-	transform: rotateX(0deg)
-	opacity: 1
 
-
-.thumb-overlay strong 
-	display: block
-	padding: 0 18px
-	color: black
-	font-weight: 300
-	text-transform: uppercase
-	font-size: 30px
-	line-height: 1.2
-	color: $najciemniejszy
 
 #Klienci
 	background: $tlo
